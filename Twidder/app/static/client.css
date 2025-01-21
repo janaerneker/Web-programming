@@ -1,0 +1,353 @@
+/* websocket */
+
+#output{
+    position: absolute;
+    top: 400px;
+}
+
+/* welcome.css */
+
+#pageBody{
+	background-color: #3498db;
+}
+
+#content{
+	margin: auto;
+	position: relative;
+	top: 100px;
+	width: 600px;
+	float: center;
+	background-color: #fff;
+}
+
+#welcome{
+	position:	absolute;
+	float: left;
+	width: 340px;
+	height: 400px;
+	border: 1px solid black;
+	background-color: #fff;
+
+}
+
+#right{
+	position:	relative;
+	margin-left: 10px;
+	float: right;
+	right: 0px;
+	width: 250px;
+	height: 400px;
+}
+
+#login{
+	position:	relative;
+	top: 0px;
+	width: 100%;
+	height: 130px;
+	border: 1px solid black;
+	background-color: #fff;
+}
+
+#signup{
+	position:	relative;
+	width: 100%;
+	height: 260px;
+	bottom: 0px;
+	margin-top: 8px;
+	margin-bottom: 0px;
+	border: 1px solid black;
+	background-color: #fff;
+}
+
+#login form{
+	left: 2%;
+	width: 96%;
+}
+
+#signup form{
+	left: 2%;
+	width: 96%;
+}
+
+button, input, select, textarea {
+  font-family : inherit;
+  font-size   : 70%;
+}
+
+/* forms */
+
+.centered form{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+form.welcomePage fieldset p{
+    clear: both;
+    padding: 5px;
+    border-color: #2E1C00;
+}
+ 
+form.welcomePage legend{
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: #2E1C00;
+    font-weight: bold;
+}
+ 
+form.welcomePage input[type=submit]{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 90px;
+    height: 18px;
+    font-family: Tahoma;
+    margin-left: 60px;
+    color: #2E1C00;
+    background: #f4f4f4;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f4f4f4), color-stop(100%, #ededed));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #f4f4f4 1%, #ededed 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#ededed', GradientType=0);
+    /* IE6-9 */
+}
+
+form.welcomePage input[type=text]{
+	float: right;
+	margin: 1px;
+	height: 16px;
+	width: 110px;
+}
+
+form.welcomePage input[type=email]{
+	float: right;
+	margin: 1px;
+	height: 16px;
+	width: 110px;
+}
+
+form.welcomePage input[type=password]{
+	float: right;
+	margin: 1px;
+	height: 16px;
+	width: 110px;
+}
+
+form.welcomePage select{
+	float: right;
+	margin: 1px;
+	height: 16px;
+	width: 110px;
+}
+
+form.welcomePage span{
+	font-size: 16px;
+	float: left;
+}
+ 
+/* end of forms */
+
+.subbutton{
+	float: right;
+}
+
+form.welcomePage fieldset{
+	position: relative;
+	margin: auto;
+}
+
+form.welcomePage label{
+	display: block;
+}
+
+#userMessages{
+	position: absolute;
+	margin: auto;
+	height: 60px;
+	width: 70%;
+	left: 15%;
+	top: 430px;
+	border: 1px solid black;
+	text-align: center;
+	background-color: #fff;
+	/*display: none;*/
+}
+
+
+/* end of welcome.css */
+
+
+/* TABS STYLES */
+.tabs {
+    max-width: 90%;
+    float: none;
+    list-style: none;
+    padding: 0;
+    margin: 75px auto;
+    border-bottom: 4px solid #ccc;
+}
+ 
+.tabs:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+ 
+.tabs input[type=radio] {
+    display:none;
+}
+ 
+.tabs label {
+    display: block;
+    float: left;
+    width: 33.3333%;
+ 
+    color: #ccc;
+    font-size: 30px;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2;
+ 
+    cursor: pointer;
+    box-shadow: inset 0 4px #ccc;
+    border-bottom: 4px solid #ccc;
+ 
+    -webkit-transition: all 0.5s; /* Safari 3.1 to 6.0 */
+    transition: all 0.5s;
+}
+  
+.tabs label span {
+    display: none;
+}
+ 
+.tabs label i {
+    padding: 5px;
+    margin-right: 0;
+}
+ 
+.tabs label:hover {
+    color: #3498db;
+    box-shadow: inset 0 4px #3498db;
+    border-bottom: 4px solid #3498db;
+}
+ 
+.tab-content {
+    display: none;
+    width: 100%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+  
+    background-color:#ffffff;
+}
+
+.tabs [id^="tab"]:checked + label {
+    background: #FFF;
+    box-shadow: inset 0 4px #3498db;
+    border-bottom: 4px solid #3498db;
+    color: #3498db;
+}
+ 
+#tab1:checked ~ #tab-content1,
+#tab2:checked ~ #tab-content2,
+#tab3:checked ~ #tab-content3 {
+    display: block;
+}
+
+/* end of TABS STYLES */
+
+/* ACCOUNT */
+
+#changePasswd{
+	position: relative;
+	margin: auto
+	top: 30px;
+	width: 40%;
+	float: center;
+}
+
+#changePasswd input[type=password]{
+	float: right;
+	margin: 1px;
+	height: 16px;
+	width: 110px;
+}
+
+#changePasswd input[type=submit]{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 90px;
+    height: 18px;
+    font-family: Tahoma;
+    margin-left: 60px;
+    color: #2E1C00;
+    background: #f4f4f4;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f4f4f4), color-stop(100%, #ededed));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #f4f4f4 1%, #ededed 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#ededed', GradientType=0);
+    /* IE6-9 */
+}
+
+/* HOME */
+#wall{
+	width: 95%;
+	padding: 25px;
+	display: inline-block;
+
+}
+
+#postbutton, #searchbutton, #reloadbutton, #logOut{
+	position: relative;
+	top: 0px;
+	border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 90px;
+    height: 20px;
+    margin: 5px;
+    font-family: Tahoma;
+    color: #2E1C00;
+    background: #f4f4f4;
+}
+
+#reloadbutton{
+	float: left;
+}
+
+#logOut{
+	float: right;
+}
+
+.postfield, .searchfield{
+	margin: 5px;
+}
+
+
+
+
+
+
+
+
+

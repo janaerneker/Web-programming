@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS Users;
+
+CREATE TABLE Users(Email TEXT PRIMARY KEY, Password TEXT, First_name TEXT, Family_name TEXT, Gender TEXT, 
+	City TEXT, Country TEXT, Number_of_Views INTEGER);
+
+DROP TABLE IF EXISTS Messages;
+
+CREATE TABLE Messages(Id INTEGER PRIMARY KEY AUTOINCREMENT, EmailFrom TEXT, Content TEXT, EmailTo TEXT);
+
+DROP TABLE IF EXISTS Signed_in;
+
+CREATE TABLE Signed_in(Token TEXT PRIMARY KEY, Email TEXT);
+

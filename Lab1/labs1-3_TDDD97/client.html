@@ -1,0 +1,156 @@
+<html>
+<head>
+	<link href="client.css" type="text/css" rel="stylesheet">
+	<script src="client.js" type="text/javascript"></script>
+	<script src="serverstub.js" type="text/javascript"></script>
+
+	<!-- WELCOME VIEW -->
+	<script type=”text/view” id="welcomeView">
+		<div id="content"> 
+			<div id="welcome">
+				<img src="wimage.png" alt="welcome"/>
+			</div>
+			<div id="right">
+				<div id="login" class="centered">
+					<form class="welcomePage" id="logInForm" onsubmit="return loginFunc(this);" >
+						<fieldset>
+						    <legend>Log in here:</legend>
+					  		<label><span>Email:</span>
+					  		<input id="clicked" type="email" name="email" required>
+					  		</label>
+					  		<br>
+					  		<label><span>Password:</span>
+					  		<input id="clicked" type="password" name="passwd" required><br>
+					  		</label>
+					  		<label><input type="submit" value="Login" class="subbutton" required></label>
+						</fieldset>
+					</form>
+				</div>
+
+				<div id="signup" class="centered">
+					<form class="welcomePage" id="signUpForm" onsubmit="return signupFunc(this);">
+						<fieldset>
+						    <legend>Sign up here:</legend>
+						    <span>First name:</span>
+						    <input type="text" name="firstname" required><br>
+						    <span>Family name:</span>
+						    <input type="text" name="familyname" required><br>
+						    <span>Gender:</span>
+						    <select name="gender" required>
+						    	<option value=""></option>
+				  				<option value="male">male</option>
+							  	<option value="female">female</option>
+							  	<option value="between">something between</option>
+							</select><br>
+						    <span>City:</span>
+						    <input type="text" name="city" required><br>
+						    <span>Country:</span>
+						    <input type="text" name="country" required><br>
+						    <span>Email:</span>
+						    <input type="email" name="mail" required><br>
+						    <span>Password:</span>
+						    <input type="password" name="pwd1" required><br>
+						    <span>Repeat PSW:</span>
+						    <input type="password" name="pwd2" required><br>
+						    <input type="submit" value="SignUp" class="subbutton" required>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div id="userMessages"></div>
+		</div>
+	</script>
+
+	<!-- template for user profile -->
+	<script type=”text/view” id="userTemplate">
+		<div id="userInfo">
+			<h3>USER INFO</h3>
+			<strong class="UI">First name</strong><br>
+				<span id="iFirstName"></span><br><br>
+			<strong class="UI">Family name</strong><br>
+				<span id="iFamilyName"></span><br><br>
+			<strong class="UI">Gender</strong><br>
+				<span id="iGender"></span><br><br>
+			<strong class="UI">City</strong><br>
+				<span id="iCity"></span><br><br>
+			<strong class="UI">Country</strong><br>
+				<span id="iCountry"></span><br><br>
+			<strong class="UI">Email</strong><br>
+				<span id="iEmail"></span><br><br>
+		</div>
+		<form id="postSTH" onsubmit="return postOnWall(this);">
+		    <input type="text" name="post" class="postField" required>
+		    <input type="submit" value="Post" id="postbutton" required>
+		</form>
+		<form id="reload" onsubmit="return reloadFunction(this);">
+			<input type="submit" value="Reload" id="reloadbutton" required>
+		</form>
+		<div id="wall"></div>
+	</script>
+
+	<!-- PROFILE VIEW -->
+	<script type=”text/view” id="profileView">
+		<div class="tabs">
+ 
+	   <!-- Radio button and lable for #tab-content1 -->
+	   <input type="radio" name="tabs" id="tab1" onclick="checkTab(this.id);">
+	   <label for="tab1">Home
+	       <i class="fa fa-html5"></i><span>HTML5</span>
+	   </label>
+	 
+	   <!-- Radio button and lable for #tab-content2 -->
+	   <input type="radio" name="tabs" id="tab2" onclick="checkTab(this.id);">
+	   <label for="tab2">Browse
+	       <i class="fa fa-css3"></i><span>CSS3</span>
+	   </label>
+	 
+	   <!-- Radio button and lable for #tab-content3 -->
+	   <input type="radio" name="tabs" id="tab3" onclick="checkTab(this.id);">
+	   <label for="tab3">Account
+	       <i class="fa fa-code"></i><span>jQuery</span>
+	   </label>
+	 
+	   <!-- TAB1 content -->
+
+	   <div id="tab-content1" class="tab-content">
+		   <div id="userProfile"></div>
+	   </div> 
+
+	   <!-- TAB2 content -->
+
+	   <div id="tab-content2" class="tab-content">
+		   	<form id="searchForm" onsubmit="return searchUser(this);">
+			    <input type="email" name="search" class="searchField" required>
+			    <input type="submit" value="Search" id="searchbutton" required>
+			</form>
+		    <div id="searchedProfile"></div>
+	   </div> 
+
+	   	<!-- TAB3 content -->
+
+	   <div id="tab-content3" class="tab-content">
+	      <button id="logOut" type="button" name="logOut">Log out</button>
+	        <form id="changePasswd" onsubmit="return changePSWForm(this);">
+				<fieldset>
+				    <legend>Change password here:</legend>
+				    <span>Old password:</span>
+				    <input type="password" name="pswd1" required><br>
+				    <span>New password:</span>
+				    <input type="password" name="pswd2" required><br>
+				    <span>New password again:</span>
+				    <input type="password" name="pswd3" required><br>
+				    <input type="submit" value="Change" class="subbutton" required>
+				</fieldset>
+			</form>
+			<div id="userMessages"></div>
+	   </div>
+
+	</div>
+	
+	</script>
+</head>
+<body id="pageBody">
+	<!-- DIV inside of which current is displayed --> 
+	<div id="view"></div>
+</body>
+</html>

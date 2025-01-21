@@ -1,0 +1,5 @@
+telnet 127.0.0.1 5000
+GET / HTTP/1.0
+Host: 127.0.0.1
+
+enter two times...
